@@ -77,7 +77,27 @@ function getRandomNumber(min, max) {
     return Math.round(Math.random() * (max - min) + min)
 }
 
-function hack() {
+document.addEventListener('keydown', event => {
+    console.log(event.key)
+    if (event.key === 'h') {
+        hackGame()
+    }
+    // if (event.key === 'a' && hack === 'h') {
+    //     hack = 'ha'
+    // }
+    // if (event.key === 'c' && hack === 'ha') {
+    //     hack = 'hac'
+    // }
+    // if (event.key === 'k' && hack === 'hak') {
+    //     hack = 'hack'
+    // }
+    //
+    // if (hack === 'hack') {
+    //     hackGame()
+    // }
+})
+
+function hackGame() {
     function kill() {
         const circle = document.querySelector('.circle')
         if (circle) {

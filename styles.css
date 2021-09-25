@@ -100,3 +100,31 @@ h1 {
   border-radius: 50%;
   cursor: pointer;
 }
+
+@media (max-width: 515px) {
+  .board {
+    width: 450px;
+    height: 550px;
+  }
+}
+@media (max-width: 463px) {
+  .board {
+    width: 400px;
+    height: 600px;
+  }
+  h1 {
+    line-height: 1.4;
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 415px) {
+  .board {
+    width: 350px;
+    height: 650px;
+  }
+  h1 {
+    line-height: 1.4;
+    font-size: 2rem;
+  }
+}
