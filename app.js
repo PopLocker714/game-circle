@@ -3,6 +3,7 @@ const screens = document.querySelectorAll('.screen')
 const timeList = document.querySelector('.time-list')
 const timeEl = document.querySelector('#time')
 const board = document.querySelector('#board')
+// const btnReset = document.querySelector('.reset')
 const colors = ['Lime', 'Crimson','Aqua','MediumPurple','DimGrey','Moccasin','DarkRed','GhostWhite',]
 let time = 0
 let score = 0
@@ -50,9 +51,12 @@ function setTime(value) {
 }
 
 function finishGame() {
-    timeEl.parentNode.classList.add('hide')
+    // timeEl.parentNode.classList.add('hide')
     board.innerHTML = `<h1>Ваш счет <span class="primary">${score}</span></h1>`
 }
+// btnReset.addEventListener('click', event => {
+
+// })
 
 function createRandomCircle() {
     const circle = document.createElement('div')
@@ -79,22 +83,10 @@ function getRandomNumber(min, max) {
 
 document.addEventListener('keydown', event => {
     console.log(event.key)
-    if (event.key === 'h') {
+    if (event.key === 'h' || event.key === 'р') {
         hackGame()
     }
-    // if (event.key === 'a' && hack === 'h') {
-    //     hack = 'ha'
-    // }
-    // if (event.key === 'c' && hack === 'ha') {
-    //     hack = 'hac'
-    // }
-    // if (event.key === 'k' && hack === 'hak') {
-    //     hack = 'hack'
-    // }
-    //
-    // if (hack === 'hack') {
-    //     hackGame()
-    // }
+
 })
 
 function hackGame() {
